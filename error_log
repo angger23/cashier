@@ -1,0 +1,2 @@
+[22-Jul-2019 01:45:22 UTC] PHP Fatal error:  Cannot redeclare Buku_umum::cetak_buku_umum2() in /home/u6815507/public_html/kasir.stikesbanyuwangi.ac.id/murcielago/controllers/Buku_umum.php on line 1008
+[22-Jul-2019 08:59:39 Asia/Jakarta] PHP Fatal error:  Cannot redeclare M_data::ordernya() in /home/u6815507/public_html/kasir.stikesbanyuwangi.ac.id/murcielago/models/M_data.php on line 263

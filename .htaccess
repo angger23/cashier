@@ -1,0 +1,96 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteCond %{HTTP_HOST} ^kasir\.stikesbanyuwangi\.ac\.id$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.kasir\.stikesbanyuwangi\.ac\.id$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/.+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Sectigo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/kasir\.stikesbanyuwangi\.ac\.id\/" [R=301,L]
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://alumni.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://alumni.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://digilib.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://digilib.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://goend.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://goend.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://kasir.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://kasir.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://kti.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://kti.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mou.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://mou.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://pmb.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://pmb.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://sim.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://sim.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://t4.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://t4.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.alumni.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.alumni.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.digilib.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.digilib.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.kasir.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.kasir.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.kti.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.kti.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mou.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.mou.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.pmb.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.pmb.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.sim.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.sim.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://alumni.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://alumni.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://digilib.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://digilib.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://goend.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://goend.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://kasir.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://kasir.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://kti.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://kti.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mou.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://mou.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://pmb.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://pmb.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://sim.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://sim.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://t4.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://t4.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.alumni.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.alumni.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.digilib.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.digilib.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.kasir.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.kasir.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.kti.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.kti.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mou.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.mou.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.pmb.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.pmb.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.sim.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.sim.stikesbanyuwangi.ac.id$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.stikesbanyuwangi.ac.id/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.stikesbanyuwangi.ac.id$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp|docx|doc|pdf|woff|ttf)$ - [F,NC]
+

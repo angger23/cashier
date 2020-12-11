@@ -1,0 +1,25 @@
+<script src="<?php echo base_url() ?>assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/plugins/moment/moment.js"></script>
+<script type="text/javascript" src="<?php echo base_url() ?>assets/plugins/datepickertime/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/plugins/datepickertime/build/css/bootstrap-datetimepicker.min.css">
+
+\\\\\|DATEPICKER|/////
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datetimepicker({
+      format: 'YYYY-MM-DD'
+    });
+
+  });
+</script>
+
+\\\\\|TIMEPICKER|/////
+<script type="text/javascript">
+  $(document).ready(function(){
+    
+    $('.timepicker').datetimepicker({
+      format: 'HH:mm'
+    });
+
+  });
+</script>
